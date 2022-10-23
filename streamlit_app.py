@@ -10,8 +10,6 @@ import plotly.express as px
 @st.experimental_singleton
 def load_model(model_path):
     model =tf.saved_model.load(model_path, options=tf.saved_model.LoadOptions(experimental_io_device='/job:localhost'))
-    st.write("model loaded")
-
     return model
 
 @st.experimental_singleton
